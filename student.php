@@ -39,6 +39,8 @@ $(document).ready(function(){
         e.preventDefault();
         $("#alert").html("");
         var code = $("#code").val();
+        var url = '<?= U::addSession('api/attend.php') ?>';
+        console.log("The URL is: " + url);
         $.ajax({
             type: "POST",
             url: '<?= U::addSession('api/attend.php') ?>',
@@ -47,7 +49,6 @@ $(document).ready(function(){
             data: JSON.stringify({ "code": code }),
             success: function (data) {
                 console.log('Attend');
-                console.log("The URL is: " + url);
                 if ( data.status == "success" ) {
                     $("#alert").html("Success");
                 } else {
