@@ -1,4 +1,4 @@
-<?phpcredits()
+<?php
 $domain = "http://localhost:3000/";
 
 header("Access-Control-Allow-Origin: $domain");
