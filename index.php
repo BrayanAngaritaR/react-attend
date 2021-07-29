@@ -15,6 +15,7 @@ $LAUNCH = LTIX::requireData();
 
 if ( ! $USER->instructor ) {
     header( 'Location: '.U::addSession('student.php') ) ;
+    var_dump("New session set to user student");
     return;
 }
 

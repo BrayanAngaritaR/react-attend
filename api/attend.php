@@ -16,10 +16,14 @@ Output::headerJson();
 // No parameter means we require CONTEXT, USER, and LINK
 $LAUNCH = LTIX::requireData(); 
 
+//Check if file is loaded
+var_dump("This is the attend file");
+
 // Takes raw data from the request
 $json = file_get_contents('php://input');
 $data = json_decode($json);
 
+//Display data sended
 var_dump($data);
 
 // Model
