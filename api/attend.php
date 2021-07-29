@@ -1,6 +1,9 @@
 <?php
 require_once "../../config.php";
 
+$domain = "http://localhost:3000/";
+header("Access-Control-Allow-Origin: $domain");
+
 use \Tsugi\Core\LTIX;
 use \Tsugi\UI\Output;
 use \Tsugi\Util\U;
