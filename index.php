@@ -15,7 +15,6 @@ $LAUNCH = LTIX::requireData();
 
 if ( ! $USER->instructor ) {
     header( 'Location: '.U::addSession('student.php') ) ;
-    var_dump("New session set to user student");
     return;
 }
 
@@ -49,6 +48,7 @@ $OUTPUT->welcomeUserCourse();
 echo('<br clear="all">');
 SettingsForm::start();
 echo("<p>Configure the LTI Tool<p>\n");
+echo("------------------- \n");
 SettingsForm::text('code',__('Code'));
 SettingsForm::checkbox('grade',__('Send a grade'));
 SettingsForm::text('match',__('Limit access by IP address.  This can be a prefix of an IP address like "142.16.41" or if it starts with a "/" it can be a regular expression (PHP syntax)'));
