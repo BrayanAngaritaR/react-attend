@@ -20,6 +20,8 @@ $LAUNCH = LTIX::requireData();
 $json = file_get_contents('php://input');
 $data = json_decode($json);
 
+var_dump($data);
+
 // Model
 $p = $CFG->dbprefix;
 $old_code = $LAUNCH->link->settingsGet('code');
