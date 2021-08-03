@@ -13,6 +13,10 @@ use \Tsugi\Util\Net;
 // No parameter means we require CONTEXT, USER, and LINK
 $LAUNCH = LTIX::requireData(); 
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: content-type");
+header("Access-Control-Allow-Methods: OPTIONS,GET,PUT,POST,DELETE");
+
 if ( ! $USER->instructor ) {
     header( 'Location: '.U::addSession('student.php') ) ;
     return;
