@@ -13,7 +13,9 @@ header('Access-Control-Max-Age: 86400');    // cache for 1 day
 
 print_r("Hello");
 
+
 ?>
 
-"Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
+<script>
+    console.log("Hi there");
+</script>
