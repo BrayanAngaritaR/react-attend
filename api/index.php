@@ -3,6 +3,10 @@
 require_once "../../config.php";
 
 use \Tsugi\Util\U;
+use \Tsugi\Core\Settings;
+use \Tsugi\UI\SettingsForm;
+use \Tsugi\Core\LTIX;
+use \Tsugi\Util\Net;
 
 // $domain = "http://localhost:3000/";
 
@@ -21,5 +25,13 @@ print_r("Hello");
 ?>
 
 <script>
+    $.getJSON('<?= addSession('api/getrows.php') ?>', function(rows) {
+        window.console && console.log(rows);
+        context = { 'rows' : rows,
+            'instructor' : true,
+            'old_code' : '<?= $old_code ?>'
+        };
+        tsugiHandlebarsToDiv('attend-div', 'attend', context);
+    }).fail( function() { alert('getJSON fail'); } );
     console.log("Hi there");
 </script>
