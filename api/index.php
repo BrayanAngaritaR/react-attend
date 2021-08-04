@@ -25,13 +25,7 @@ print_r("Hello");
 ?>
 
 <script>
-    $.getJSON('<?= addSession('api/getrows.php') ?>', function(rows) {
-        window.console && console.log(rows);
-        context = { 'rows' : rows,
-            'instructor' : true,
-            'old_code' : '<?= $old_code ?>'
-        };
-        tsugiHandlebarsToDiv('attend-div', 'attend', context);
-    }).fail( function() { alert('getJSON fail'); } );
+    var url = '<?= U::addSession('api/attend.php') ?>';
     console.log("Hi there");
+    console.log(url);
 </script>
