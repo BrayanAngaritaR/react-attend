@@ -1,5 +1,9 @@
 <?php
 
+require_once "../../config.php";
+
+use \Tsugi\Util\U;
+
 // $domain = "http://localhost:3000/";
 
 // header("Access-Control-Allow-Origin: $domain");
